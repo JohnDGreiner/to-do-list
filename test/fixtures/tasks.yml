@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  order_number: 1
+  due_at: 2015-06-19 15:57:33
+  is_completed: false
+
+two:
+  description: MyString
+  order_number: 1
+  due_at: 2015-06-19 15:57:33
+  is_completed: false
