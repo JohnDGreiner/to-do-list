@@ -13,20 +13,14 @@
     </tr>
   </thead>
 
-  <tbody>
+  <div>
     <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.description %></td>
-        <td><%= task.order_number %></td>
-        <td><%= task.due_at %></td>
-        <td><%= task.is_completed %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="task-form-container">
+        <%= render partial: 'update_task', local: { task: task } %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
 <br>
 
