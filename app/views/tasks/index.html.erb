@@ -2,7 +2,7 @@
 
 <h1>Listing Tasks</h1>
 
-<table>
+<div>
   <thead>
     <tr>
       <th>Description</th>
@@ -16,12 +16,11 @@
   <div>
     <% @tasks.each do |task| %>
       <div class="task-form-container">
-        <%= render partial: 'update_task', local: { task: task } %>
+        <%= render partial: 'update_task', locals: { task: task } %>
       </div>
     <% end %>
   </div>
 </div>
 
-<br>
 
 <%= link_to 'New Task', new_task_path %>

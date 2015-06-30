@@ -10,7 +10,7 @@
       <%= task.due_at %>
     </div>
     <div>
-      <%= f.check_box task.is_completed %>
+      <%= f.check_box :is_completed,  :onclick => "submitOnCheck()" %>
     </div>
     <div>
       <%= link_to 'Show', task %>

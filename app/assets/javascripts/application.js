@@ -14,3 +14,8 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+
+function submitOnCheck () {
+  var checker = $(event.target);
+  checker.closest("form").submit();
+}
