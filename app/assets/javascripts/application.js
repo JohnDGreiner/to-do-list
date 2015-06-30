@@ -14,6 +14,8 @@
 //= require bootstrap-sprockets
 //= require jquery-ui
 //= require jquery_ujs
+//= require jquery-ui/sortable
+//= require jquery-ui/effect-highlight
 //= require_tree .
 
 function submitOnCheck () {
