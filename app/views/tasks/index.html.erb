@@ -15,9 +15,9 @@
 
   <div>
     <% @tasks.each do |task| %>
-      <div class="task-form-container">
+      <ul class="task-form-container">
         <%= render partial: 'update_task', locals: { task: task } %>
-      </div>
+      </ul>
     <% end %>
   </div>
 </div>

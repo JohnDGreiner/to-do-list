@@ -1,21 +1,21 @@
 <%= form_for task, remote: true do |f| %>
-  <div>
-    <div>
+  <li class="row">
+    <div class="col-md-3">
       <%= task.description %>
     </div>
-    <div>
+    <div class="col-md-3">
       <%= task.order_number %>
     </div>
-    <div>
+    <div class="col-md-3">
       <%= task.due_at %>
     </div>
-    <div>
+    <div class="col-md-3">
       <%= f.check_box :is_completed,  :onclick => "submitOnCheck()" %>
     </div>
-    <div>
+    <!-- <div>
       <%= link_to 'Show', task %>
       <%= link_to 'Edit', edit_task_path(task) %>
       <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  </div>
+    </div> -->
+  </li>
 <% end %>
