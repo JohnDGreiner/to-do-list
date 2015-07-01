@@ -21,6 +21,15 @@ class TasksController < ApplicationController
   def edit
   end
 
+  def sort
+    @task = Task.all
+    @task.each do |task|
+      task.order_number = params['task'].index(task.id.to_s) + 1
+      task.save
+    end
+    render :nothing => true
+  end
+
   # POST /tasks
   # POST /tasks.json
   def create
@@ -41,7 +50,7 @@ class TasksController < ApplicationController
   # PATCH/PUT /tasks/1.json
   def update
       @task.update(task_params)
-      # redirect_to @task, notice: 'Task was successfully updated.' 
+      # redirect_to @task, notice: 'Task was successfully updated.'
   end
 
   # DELETE /tasks/1

@@ -1,0 +1,20 @@
+
+<li class="row" id="task_<%= task.id %>">
+  <div class="col-md-3">
+    <%= task.description %>
+  </div>
+  <div class="col-md-3">
+    <%= task.order_number %>
+  </div>
+  <div class="col-md-3">
+    <%= task.due_at %>
+  </div>
+  <div class="col-md-3">
+    <%= check_box_tag :is_completed %>
+  </div>
+  <div>
+    <%= link_to 'Show', task %>
+    <%= link_to 'Edit', edit_task_path(task) %>
+    <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</li>

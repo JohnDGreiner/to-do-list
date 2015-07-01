@@ -18,7 +18,17 @@
 //= require jquery-ui/effect-highlight
 //= require_tree .
 
-function submitOnCheck () {
-  var checker = $(event.target);
-  checker.closest("form").submit();
-}
+$(function(){
+  $('#tasks').sortable({
+    axis: 'y',
+    items: 'li',
+    cursor: 'move',
+    update: function(){
+      $.ajax({
+        url: '/tasks/sort',
+        type: 'post',
+        data: $('#tasks').sortable('serialize')
+      })
+    }
+  });
+});
